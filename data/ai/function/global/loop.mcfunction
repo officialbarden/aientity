@@ -10,7 +10,7 @@ execute as @e[tag=ai.wander.walk] at @s run tp @s ^ ^ ^0.1
 
 #> if reached node, make new decision
 execute as @e[tag=ai.wander.walk] at @s if entity @e[tag=ai.wander.node,distance=..0.1] run function ai:common_behavior/wander/choice/decide
-
+execute as @e[tag=ai.wander.walk] at @s if entity @e[tag=ai.pass.node,distance=..0.1] run function ai:common_behavior/wander/walk/find_node/evolve_from_pass_node
 #> remove tags:
 tag @e remove new.node.temp
 
